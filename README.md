@@ -10,7 +10,7 @@ docker build -t guilhermecunha/maskrcnn .
 ```
 Com a imagem pronta, você precisará iniciar um container utilizando esta imagem.
 ```
-docker run -name maskrcnn -p 8888:8888 -it guilhermecunha/maskrcnn
+docker run --name maskrcnn -p 8888:8888 -it guilhermecunha/maskrcnn
 ```
 Estando dentro do container, basta inicializar o Jupyter Notebook.
 ```

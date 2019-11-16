@@ -38,7 +38,6 @@ RUN apt-get -y install libgtk2.0-dev
 # Instalando dependencias do Mask_RCNN
 RUN pip install numpy scipy Pillow cython matplotlib scikit-image opencv-python h5py imgaug IPython[all]
 #
-
 # Tensorflow 1.3.0 - CPU
 #
 RUN pip install tensorflow==1.3.0
@@ -49,7 +48,7 @@ EXPOSE 6006
 #
 # h5py + Keras
 #
-RUN pip3 install --no-cache-dir --upgrade h5py keras
+RUN pip3 install --no-cache-dir --upgrade h5py pydot_ng keras==2.0.8
 
 #
 # PyCocoTools
