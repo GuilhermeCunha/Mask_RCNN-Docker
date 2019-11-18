@@ -58,7 +58,14 @@ RUN pip3 install --no-cache-dir git+https://github.com/waleedka/coco.git#subdire
 # Definindo area de trabalho
 WORKDIR "/root"
 
-# Clonando Mask_RCNN
-RUN git clone https://github.com/matterport/Mask_RCNN.git
+# Copia os arquivos contidos na pasta para o container
+COPY . .
 
+# Caso queira clocar o MASK RCNN original, basta descomentar o comando abaixo e comentar o COPY
+#RUN git clone https://github.com/matterport/Mask_RCNN.git
+
+# Executa o bash
 CMD ["/bin/bash"]
+
+# Faz com que o jupyter seja executado assim que o container seja iniciado
+CMD jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
