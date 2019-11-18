@@ -1,20 +1,18 @@
 # Mask_RCNN Docker Image
 
-Docker ideal para utilização do Mask_RCNN.
+Docker ideal para utilização do <a href="https://github.com/matterport/Mask_RCNN">Mask RCNN</a>.
 
-## Como instalar
+## Primeira utilização
 
-Primeiro você precisará buildar a imagem através do comando abaixo.
+1) Colocar pasta da sua Mask RCNN na origem deste repositório, ou seja, em X:/path/to/Mask_RCNN-Docker/
+
+2) Buildar a imagem.
 ```
 docker build -t guilhermecunha/maskrcnn .
 ```
-Com a imagem pronta, você precisará iniciar um container utilizando esta imagem.
+3) Com a imagem pronta, você precisará iniciar um container utilizando esta imagem.
 ```
 docker run --name maskrcnn -p 8888:8888 -it guilhermecunha/maskrcnn
-```
-Estando dentro do container, basta inicializar o Jupyter Notebook.
-```
- jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
 ```
 
 ## Como usar
