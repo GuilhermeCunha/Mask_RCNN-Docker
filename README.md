@@ -15,6 +15,10 @@ docker build -t guilhermecunha/maskrcnn .
 4) Com a imagem pronta, você precisará iniciar um container utilizando esta imagem.
 ```
 docker run --name maskrcnn -p 8888:8888 -it guilhermecunha/maskrcnn
+# caso apareça esta mensagem : 
+#"the input device is not a TTY.  If you are using #mintty, try prefixing the command with 'winpty'"
+#utilize o comando abaixo
+winpty docker run --name maskrcnn -p 8888:8888 -it guilhermecunha/maskrcnn
 ```
 
 ## Como utilizar o Container
